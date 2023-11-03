@@ -8,10 +8,10 @@ public class AtmMain {
         atm.bakiyem = 10000;
 
         Scanner scan = new Scanner(System.in);
-
-        while(atm.bakiyem>0){
+        int input = -1;
+        while(input!=4){
             atm.islemler();
-            int input = scan.nextInt();
+            input = scan.nextInt();
             switch (input) {
                 case 1:
                     atm.paracekVeyaParaGonder();
@@ -24,6 +24,8 @@ public class AtmMain {
                     break;
                 case 4:
                     break;
+                default:
+                    System.out.println("geçersiz bir işlem girdiniz.");
             }
         }
         System.out.println("tekrar beklerız");
