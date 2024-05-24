@@ -7,8 +7,8 @@ public class Main {
         String[] stringDizi={"c++","c#","phyton","java"};
         Ogrenci[] ogrenciDizisi={new Ogrenci("asya"),new Ogrenci("Aysima"),new Ogrenci("ecrin"),new Ogrenci("Halime")};
 
-
-        YazdirmaSinifi<Character> characterYazdirmaSinifi= new YazdirmaSinifi<Character>();
+                   //************GENERİC CLASSLA YAZILDIĞI ZAMAN*************\\
+       /* YazdirmaSinifi<Character> characterYazdirmaSinifi= new YazdirmaSinifi<Character>();
         YazdirmaSinifi<Integer> integerYazdirmaSinifi= new YazdirmaSinifi<Integer>();
         YazdirmaSinifi<String> stringYazdirmaSinifi= new YazdirmaSinifi<String>();
         YazdirmaSinifi<Ogrenci> ogrenciYazdirmaSinifi= new YazdirmaSinifi<Ogrenci>();
@@ -20,8 +20,24 @@ public class Main {
         stringYazdirmaSinifi.yazdir(stringDizi);
         System.out.println("*********************************************************");
         ogrenciYazdirmaSinifi.yazdir(ogrenciDizisi);
-        System.out.println("*********************************************************");
+        System.out.println("*********************************************************");*/
+
+             //*********GENERİC METOTLA YAZILDIGI ZAMAN**********\\
+        yazdir(charactersDizi);
+        System.out.println("***************************************************");
+        yazdir(integersDizi);
+        System.out.println("***************************************************");
+        yazdir(stringDizi);
+        System.out.println("***************************************************");
+        yazdir(ogrenciDizisi);
+        System.out.println("***************************************************");
 
 
+    }
+
+    public static <E> void yazdir(E[] dizi){//generic metot
+        for (int i = 0; i < dizi.length; i++) {
+            System.out.println(dizi[i]);
+        }
     }
 }
